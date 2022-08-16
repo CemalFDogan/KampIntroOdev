@@ -5,8 +5,7 @@ using System.Text;
 
 namespace CoffeeCustomerManagerSystemDemo.Concrete
 {
-    public class NeroCustomerManager:BaseCustomerManager
+    public class NeroCustomerManager: BaseCustomerManager
     {
-        
     }
 }

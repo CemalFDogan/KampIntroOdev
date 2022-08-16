@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GamerManagerSystem.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CoffeeCustomerManagerSystemDemo.Entities
+namespace GamerManagerSystem.Entities
 {
-    public class Customer:IEntity
+    public class Gamer : IEntity
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -13,3 +14,5 @@ namespace CoffeeCustomerManagerSystemDemo.Entities
         public string NationalityId { get; set; }
     }
 }
+
+    
