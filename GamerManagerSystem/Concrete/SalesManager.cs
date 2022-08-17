@@ -1,4 +1,5 @@
 ﻿using GamerManagerSystem.Entities;
+using System;
 
 namespace GamerManagerSystem.Concrete
 {
@@ -6,7 +7,9 @@ namespace GamerManagerSystem.Concrete
     {
         public void Sell(Game game, Campaign campaign, Gamer gamer)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine($"Oyunun Adı: {game.GameName}");
+            Console.WriteLine($"Oyunun Kategorisi: {game.GameCategory}");
+            Console.WriteLine($"Oyunun Fiyatı: {game.GamePrice} ₺");
         }
     }
 }

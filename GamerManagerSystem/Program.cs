@@ -1,4 +1,5 @@
 ﻿using GamerManagerSystem.Abstract;
+using GamerManagerSystem.Adapters1;
 using GamerManagerSystem.Concrete;
 using GamerManagerSystem.Entities;
 using System;
@@ -42,21 +43,28 @@ namespace GamerManagerSystem
             Console.WriteLine("Oyuncu İşlemleri");
             Console.WriteLine();
 
-            Gamer gamer1 = new Gamer() { Id = 1, FirstName = "Cemal Faruk", LastName = "Doğan" };
-            Gamer gamer2 = new Gamer() { Id = 2, FirstName = "Bekir", LastName = "Doğan" };
+            //Gamer gamer1 = new Gamer() { Id = 1, FirstName = "Cemal Faruk", LastName = "Doğan" };
+            //Gamer gamer2 = new Gamer() { Id = 2, FirstName = "Bekir", LastName = "Doğan" };
 
-            GamerManager gamerManager = new GamerManager();
-            gamerManager.Add(gamer1);
-            gamerManager.Add(gamer2);
-            Console.WriteLine();
-            gamerManager.List();
-            Console.WriteLine();
-            gamerManager.Delete(gamer2);
-            Console.WriteLine();
-            gamerManager.Update(gamer1);
-            Console.WriteLine();
-            gamerManager.List();
+            //GamerManager gamerManager = new GamerManager();
+            //gamerManager.Add(gamer1);
+            //gamerManager.Add(gamer2);
+            //Console.WriteLine();
+            //gamerManager.List();
+            //Console.WriteLine();
+            //gamerManager.Delete(gamer2);
+            //Console.WriteLine();
+            //gamerManager.Update(gamer1);
+            //Console.WriteLine();
+            //gamerManager.List();
 
+            // Bilgiler yanlış olduğu için exeption yollayacaktır. Eğer herçek kimlik bilgileri girilirse 
+            // kaydedecektir.
+            BaseGamerManager gamerManager = new GamerManager(new MernisServiceAdapter1());
+            gamerManager.Add(new Gamer {DateOfBirth = new DateTime(2000, 9, 26), FirstName = "Cemal Faruk",
+                LastName = "Doğan", NationalityId = "45589506758", Id = 2});
+
+            Console.ReadLine();
         }
     }
 }

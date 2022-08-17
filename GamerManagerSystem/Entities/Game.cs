@@ -10,7 +10,7 @@ namespace GamerManagerSystem.Entities
         public int Id { get; set; }
         public string GameName { get; set; }
         public string GameCategory { get; set; }
-        public string GamePrice { get; set; }
+        public double GamePrice { get; set; }
 
     }
 }

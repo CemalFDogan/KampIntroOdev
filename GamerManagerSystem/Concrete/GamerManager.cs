@@ -6,48 +6,26 @@ using System.Text;
 
 namespace GamerManagerSystem.Concrete
 {
-    public class GamerManager : IGamerService
+    public class GamerManager : BaseGamerManager
     {
-        List<Gamer> gamers = new List<Gamer>();
+        IPersonCheckService _personCheckService;
 
-        public void Add(Gamer gamer)
+        public GamerManager(IPersonCheckService personCheckService)
         {
-            gamers.Add(gamer);
-            Console.WriteLine($"{gamer.FirstName} {gamer.LastName} Başarılı Bir Şekilde Eklendi.");
+            _personCheckService = personCheckService;
         }
 
-        public void Delete(Gamer gamer)
+        public override void Add(Gamer gamer)
         {
-            Console.WriteLine($"Silmek istenilen Oyuncu : {gamer.FirstName} {gamer.LastName}" + "\n"
-                + "Lütfen bekleyin. Siliniyor!");
-
-            gamers.Remove(gamer);
-            Console.WriteLine("Oyuncu Başarılı Bir Şekilde Silindi.");
-        }
-
-        public void List()
-        {
-            System.Console.WriteLine("---- Oyuncular ----");
-            foreach (Gamer gamer1 in gamers)
+            if (_personCheckService.CheckIfRealPerson(gamer))
             {
-                Console.WriteLine($"{gamer1.Id} : {gamer1.FirstName} {gamer1.LastName}");
+                base.Add(gamer);
             }
-            Console.WriteLine("Oyuncular Başarılı Bir Şekilde Listelendi.");
-        }
-
-        public void Update(Gamer gamer)
-        {
-            Console.Write("Güncellemek istediğiniz oyuncunun Id'sini girin:");
-            gamer.Id = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("Oyuncunun Adı: ");
-            gamer.FirstName = Console.ReadLine();
-
-            Console.Write("Oyuncunun Soyadı: ");
-            gamer.LastName = Console.ReadLine();
+            else
+            {
+                throw new Exception("Not a valid person.");
+            }
             
-
-            Console.WriteLine($"Id numarası {gamer.Id} Olan Oyuncu Başarılı Bir Şekilde Güncellendi.");
         }
     }
 }
