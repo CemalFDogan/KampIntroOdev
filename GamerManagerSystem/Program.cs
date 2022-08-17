@@ -22,8 +22,8 @@ namespace GamerManagerSystem
             Campaign campaign2 = new Campaign() 
             {
                 Id = 2, 
-                CampaignName = "2 Al 1 Öde", 
-                CampaignContent = "2 KİTAP AL VE 1 KİTAP PARASI ÖDE"
+                CampaignName = "%15 indirim", 
+                CampaignContent = "200 TL ve üzeri alışverişte %15 indirim"
             };
 
             CampaignManager campaignManager = new CampaignManager();
@@ -59,11 +59,31 @@ namespace GamerManagerSystem
             //gamerManager.List();
 
             // Bilgiler yanlış olduğu için exeption yollayacaktır. Eğer herçek kimlik bilgileri girilirse 
-            // kaydedecektir.
-            BaseGamerManager gamerManager = new GamerManager(new MernisServiceAdapter1());
-            gamerManager.Add(new Gamer {DateOfBirth = new DateTime(2000, 9, 26), FirstName = "Cemal Faruk",
-                LastName = "Doğan", NationalityId = "45589506758", Id = 2});
+            // kaydedecektir.                                new MernisServiceAdapter1()
+            BaseGamerManager gamerManager = new GamerManager(new PersonCheckManager());
+            gamerManager.Add(new Gamer
+            {
+                DateOfBirth = new DateTime(2000, 9, 26),
+                FirstName = "Cemal Faruk",
+                LastName = "Doğan",
+                NationalityId = "45589506758",
+                Id = 2
+            });
 
+            Console.WriteLine();
+
+            ISalesService salesManager = new SalesManager();
+            salesManager.AddToCart(
+                new Game { GameName="NBA2K", GameCategory="Spor", GamePrice= 455.00 }, 
+                campaign2, 
+                new Gamer {
+                    DateOfBirth = new DateTime(2000, 9, 26),
+                    FirstName = "Cemal Faruk",
+                    LastName = "Doğan",
+                    NationalityId = "45589506758",
+                    Id = 2
+                }
+                );
             Console.ReadLine();
         }
     }

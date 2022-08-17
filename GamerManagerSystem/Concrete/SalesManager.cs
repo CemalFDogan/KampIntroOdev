@@ -1,15 +1,19 @@
-﻿using GamerManagerSystem.Entities;
+﻿using GamerManagerSystem.Abstract;
+using GamerManagerSystem.Entities;
 using System;
+using System.Collections.Generic;
 
 namespace GamerManagerSystem.Concrete
 {
     public class SalesManager : ISalesService
     {
-        public void Sell(Game game, Campaign campaign, Gamer gamer)
+        
+        public void AddToCart(Game game, Campaign campaign, Gamer gamer)
         {
+            Console.WriteLine("----------- Sepet İşlemleri------------");
             Console.WriteLine($"Oyunun Adı: {game.GameName}");
-            Console.WriteLine($"Oyunun Kategorisi: {game.GameCategory}");
-            Console.WriteLine($"Oyunun Fiyatı: {game.GamePrice} ₺");
+            Console.WriteLine($"Oyunun Fiyatı: {game.GamePrice} --- {campaign.CampaignName} -> {campaign.CampaignContent}");
+            Console.WriteLine($"Oyunu Alan Oyuncu: {gamer.FirstName} {gamer.LastName}");
         }
     }
 }

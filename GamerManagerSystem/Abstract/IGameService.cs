@@ -5,8 +5,11 @@ using System.Text;
 
 namespace GamerManagerSystem.Abstract
 {
-    interface ISalesService
+    public interface IGameService
     {
-        void AddToCart(Game game, Campaign campaign, Gamer gamer);
+        void Add(Game game);
+        void Delete(Game game);
+        void Update(Game game);
+        void List();
     }
 }
