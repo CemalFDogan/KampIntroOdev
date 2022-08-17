@@ -1,6 +1,7 @@
 ﻿using CoffeeCustomerManagerSystemDemo.Abstract;
 using CoffeeCustomerManagerSystemDemo.Concrete;
 using CoffeeCustomerManagerSystemDemo.Entities;
+using CoffeeCustomerManagerSystemDemo.Adapters;
 using System;
 
 namespace CoffeeCustomerManagerSystemDemo
@@ -9,9 +10,9 @@ namespace CoffeeCustomerManagerSystemDemo
     {
         static void Main(string[] args)
         {
-            BaseCustomerManager customerManager = new NeroCustomerManager();
+            BaseCustomerManager customerManager = new StarbucksCustomerManager( new CustomerCheckManager());
             customerManager.Save(new Customer { DateOfBirth = new DateTime(2001, 9, 26), FirstName = "Cemal Faruk", 
-                LastName = "Doğan", NationalityId = "30581102572" }) ;
+                LastName = "Doğan", NationalityId = "31254736895" }) ;
         }
     }
 }

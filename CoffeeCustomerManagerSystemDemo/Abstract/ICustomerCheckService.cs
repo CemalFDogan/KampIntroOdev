@@ -8,6 +8,6 @@ namespace CoffeeCustomerManagerSystemDemo.Abstract
 {
     public interface ICustomerCheckService
     {
-        bool CheckIfRealPerson(Customer customer)
+        bool CheckIfRealPerson(Customer customer);
     }
 }
