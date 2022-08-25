@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32126.315
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KampIntroOdev", "KampIntroOdev\KampIntroOdev.csproj", "{1877FFAA-49FA-441D-8459-53FB8C2EEA10}"
 EndProject
@@ -67,7 +67,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClass1", "AbstractC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamerManagerSystem", "GamerManagerSystem\GamerManagerSystem.csproj", "{6AD570E1-9F0F-424B-8C86-E1AE498BA703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeCustomerManagerSystemDemo", "CoffeeCustomerManagerSystemDemo\CoffeeCustomerManagerSystemDemo.csproj", "{8B2CAE14-C245-43AD-B044-CA32D4AAD5C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoffeeCustomerManagerSystemDemo", "CoffeeCustomerManagerSystemDemo\CoffeeCustomerManagerSystemDemo.csproj", "{8B2CAE14-C245-43AD-B044-CA32D4AAD5C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gun5", "Gun5", "{D0A28234-FD34-438A-95B3-F5C2E207C61A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gun6", "Gun6", "{54241DE1-E17C-48D5-9CAA-68DF4FA6A1E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqProject", "LinqProject\LinqProject.csproj", "{925E6B90-9D0F-4710-9B8B-16316B62AB30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +149,10 @@ Global
 		{8B2CAE14-C245-43AD-B044-CA32D4AAD5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B2CAE14-C245-43AD-B044-CA32D4AAD5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B2CAE14-C245-43AD-B044-CA32D4AAD5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925E6B90-9D0F-4710-9B8B-16316B62AB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925E6B90-9D0F-4710-9B8B-16316B62AB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925E6B90-9D0F-4710-9B8B-16316B62AB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925E6B90-9D0F-4710-9B8B-16316B62AB30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -176,6 +186,7 @@ Global
 		{95A0F978-E6F3-4418-AAEA-F25F5069570F} = {4E973A44-EE12-4EBA-9D25-86900E3B430C}
 		{6AD570E1-9F0F-424B-8C86-E1AE498BA703} = {64A6D50B-FA8C-4528-B2A2-A0C2CD5EBD5F}
 		{8B2CAE14-C245-43AD-B044-CA32D4AAD5C4} = {3F989E3F-609E-4DCC-A69B-85E5D206054B}
+		{925E6B90-9D0F-4710-9B8B-16316B62AB30} = {54241DE1-E17C-48D5-9CAA-68DF4FA6A1E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BDDA0B0-ACF5-4593-A496-E704295715A4}
